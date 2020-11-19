@@ -7,9 +7,10 @@ import {
 } from 'react-native';
 
 import pokeball from './src/image/icons/pokeball.png'
-// import pikachu from './src/image/pokemons/Pikachu.gif'
 
-const App: () => React$Node = () => {
+const App: () => React = () => {
+  let poke = 'Abra.gif'
+
   return (
     <>
     <View style={styles.home}>
