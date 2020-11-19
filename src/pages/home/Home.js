@@ -1,11 +1,12 @@
 import React from 'react';
 import { Button, SafeAreaView, Image, StyleSheet, View, Text } from 'react-native'
 
+//<Image style={styles.icon} source={require('../../image/icons/pokeball.png')} />
 
 const Home = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.home} >
-            <Image style={styles.icon} source={require('../../image/icons/pokeball.png')} />
+            <Image style={styles.icon} source={require('../../image/pokemons/Pikachu.gif')} />
             <Text style={styles.title}>Pokédex - TADS</Text>
             <View style={styles.buttonContainer}>
                 <Button 
