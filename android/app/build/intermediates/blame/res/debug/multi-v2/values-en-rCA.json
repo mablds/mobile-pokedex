@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Windows\\Documents\\GitHub\\Pokedex\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
+            "outputFile": "D:\\Windows\\Documents\\GitHub\\mobile-pokedex\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Marcelo\\.gradle\\caches\\transforms-2\\files-2.1\\639e914bfc1efa21e36199d3ff2c5eef\\core-1.1.0\\res\\values-en-rCA\\values-en-rCA.xml",
