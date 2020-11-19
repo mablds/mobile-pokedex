@@ -1,15 +1,24 @@
 import React from 'react';
-import { Text, SafeAreaView, Image, StyleSheet } from 'react-native'
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
+import { Button, SafeAreaView, Image, StyleSheet } from 'react-native'
 
-const Home = () => {
+
+const Home = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.home} >
             <Image style={styles.icon} source={require('../../image/icons/pokeball.png')} />
-            <Text style={styles.text}>
-                Pokédex
-            </Text>
+            <Button 
+                title="Pokedex"
+                onPress={() => navigation.navigate('Pokedex')}
+            />
+            <Button 
+                title="Abilities"
+                onPress={() => navigation.navigate('Abilities')}
+            />
+            <Button 
+                title="Types"
+                onPress={() => navigation.navigate('Types')}
+            />
+
         </SafeAreaView>
     )
 }
