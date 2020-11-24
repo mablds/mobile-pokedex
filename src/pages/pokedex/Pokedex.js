@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native'
+import { Text, SafeAreaView, StyleSheet, TouchableOpacity, TextInput } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 
 import pokeList from '../../public/pokeList.json'

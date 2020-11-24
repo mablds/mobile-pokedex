@@ -12,16 +12,11 @@ const Home = ({ navigation }) => {
                     color='#4D4D4D'
                     onPress={() => navigation.navigate('Pokedex')}
                 />
-                <Button 
-                    title="Abilities"
-                    color='#4D4D4D'
-                    onPress={() => navigation.navigate('Abilities')}
-                />
-                <Button 
-                    title="Types"
-                    color='#4D4D4D'
-                    onPress={() => navigation.navigate('Types')}
-                />
+            </View>
+            <View>
+              <Text style={{justifyContent: 'flex-end', paddingTop: 50, color: '#4D4D4D', textAlign: 'center'}}>
+                {"Feito por:\n Arthur Sakemi, Diogo Souza e Marcelo Arthur"}
+              </Text>
             </View>
         </SafeAreaView>
     )
