@@ -6,6 +6,7 @@ import Home from './src/pages/home/Home'
 import Pokedex from './src/pages/pokedex/Pokedex'
 import Abilities from './src/pages/abilities/Abilities'
 import Types from './src/pages/types/Types'
+import DetailsPokemon from './src/pages/detailsPoke/DetailsPoke'
 
 const Stack = createStackNavigator()
 
@@ -17,6 +18,7 @@ const App = () => {
         <Stack.Screen name="Pokedex" component={Pokedex}/>
         <Stack.Screen name="Abilities" component={Abilities}/>
         <Stack.Screen name="Types" component={Types}/>
+        <Stack.Screen name="DetailsPokemon" component={DetailsPokemon}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

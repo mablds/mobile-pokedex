@@ -1,12 +1,10 @@
 import React from 'react';
 import { Button, SafeAreaView, Image, StyleSheet, View, Text } from 'react-native'
 
-//<Image style={styles.icon} source={require('../../image/icons/pokeball.png')} />
-
 const Home = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.home} >
-            <Image style={styles.icon} source={require('../../image/pokemons/Pikachu.gif')} />
+            <Image style={styles.icon} source={require('../../image/icons/pokeball.png')} />
             <Text style={styles.title}>Pokédex - TADS</Text>
             <View style={styles.buttonContainer}>
                 <Button 
@@ -43,8 +41,8 @@ const styles = StyleSheet.create({
       textTransform: "uppercase",
     },
     icon: {
-      width: 100,
-      height: 100,
+      width: 300,
+      height: 300,
       alignSelf: 'center',
       resizeMode: 'contain',
     },

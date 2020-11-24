@@ -1,27 +1,24 @@
 import React from 'react';
-import { Text, SafeAreaView, StyleSheet, Image, View } from 'react-native'
+import { Text, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 
-import pokeList from '../../image/index'
+import pokeList from '../../public/pokeList.json'
 
-const Pokedex = () => {
+const Pokedex = ({ navigation }) => {
+
+    const handlePokemonInfo = (pokemon) => {
+        navigation.navigate('DetailsPokemon', { pokemon })
+    }
+    
     return (
         <SafeAreaView style={styles.home}>
-            <ScrollView>
+            <ScrollView >
                 {pokeList.map((el, key) => {
                     return (
-                        <View key={key} style={{ paddingTop: 50, flexDirection:'row', flexWrap: 'nowrap', }}>
-                            <Image 
-                                style={{ 
-                                    width: 100,
-                                    height: 100,
-                                    alignSelf: 'center',
-                                    resizeMode: 'contain', 
-                                }}
-                                source={el.uri} 
-                            />
-                            <Text>{el.name}</Text>
-                        </View>
+                        <TouchableOpacity key={key} style={styles.pokedex} onPress={() => handlePokemonInfo(el)}>
+                            <Text style={styles.id}> {"#" + el.id} </Text>
+                            <Text style={styles.pokeName}> {el.fileGifName.replace(".gif", "")} </Text>
+                        </TouchableOpacity>
                     )
                 })}                
             </ScrollView>
@@ -31,11 +28,29 @@ const Pokedex = () => {
 
 const styles = StyleSheet.create({
     home: {
-        flex: 1, 
-        justifyContent: "center", 
-        alignItems: "center",
-        backgroundColor: "#F97052",
+        alignSelf:'center',
+        width: '100%',
+        backgroundColor: '#3A3B3C',
     },
+    pokedex: {
+        display: 'flex',
+        flexDirection: 'row',
+        padding: 15,
+        backgroundColor: "#F97052",
+        marginBottom: 7,
+        width: '100%'
+    },
+    id: {
+        fontSize: 20,
+        marginLeft: 15,
+        color: 'black',
+        width: '20%'
+    },
+    pokeName: {
+        fontSize: 18,
+        marginLeft: 10,
+        color: 'black'
+    }
 })
 
 export default Pokedex
